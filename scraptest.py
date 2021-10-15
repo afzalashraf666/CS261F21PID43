@@ -13,5 +13,5 @@ for instance in soup.findAll('li' , attrs={'class':'capital-letter genre-term'})
     genre = instance.find('a', class_=False, id=False)
     genres.append(genre.text)
 
-for Index in genres:
-    print(Index)
+for genre in genres:
+    print(genre)
