@@ -26,6 +26,12 @@ for instance in soup.findAll('li' , attrs={'class':'capital-letter genre-term'})
     genre = instance.find('a', class_=False, id=False)
     genres.append(genre.text)
 '''
+def nonetyper(nonetype_obj):
+    if nonetype_obj is None:
+        nonetype_obj = "NIL"
+        return nonetype_obj
+    else:
+        return nonetype_obj
 
 url = "https://soundcloud.com/search/sounds?q=" + str("pop")
 print("pop")
@@ -58,13 +64,12 @@ for instance in soup.findAll('div' , attrs={'class':'sound__body'}):
     
     comment = instance.find('li',  class_=['sc-ministats-item'])
     temp = comment.find_next('li')
-    print(temp.text)
 
     song_names.append(song_name.text)
     artist_names.append(artist_name.text.strip())
 
     release_date_int  = [int(s) for s in str(release_date).split() if s.isdigit()]
-    release_date_int = 2021 - release_date_int
+    release_date_int = 2021 - int(release_date_int[1])
     release_dates.append(release_date_int)
     
     genre_tags.append(genre_tag.text)
@@ -77,17 +82,11 @@ for instance in soup.findAll('div' , attrs={'class':'sound__body'}):
 
     comments_str = ""
     for idx in range(19, len(temp.text)-1):
-        print(temp.text[idx])
         comments_str+=temp.text[idx]
     comments.append(comments_str.strip())
 
 
-
-
-    
-
-print(comments)
-dataset = [artist_names]
+dataset = [song_names,artist_names,plays,likes,comments,release_dates,reposts,genre_tags]
 df = pd.DataFrame(data = dataset).T
-df.columns = ["NAME"]
+#df.columns = ["NAME"]
 df.to_csv("datasets.csv" ,index=False)
