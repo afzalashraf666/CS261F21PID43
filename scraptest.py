@@ -48,7 +48,7 @@ def garbage_remover(garbage_string):
 
 def get_songs():
 
-    for idx in range(0,1):
+    for idx in range(len(genres)):
     
         url = "https://soundcloud.com/search/sounds?q=" + str(genres[idx])
         driver.get(url)
