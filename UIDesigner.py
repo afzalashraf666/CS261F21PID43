@@ -22,16 +22,51 @@
      <height>22</height>
     </rect>
    </property>
-  </widget>
-  <widget class="QComboBox" name="column2">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>160</y>
-     <width>101</width>
-     <height>22</height>
-    </rect>
-   </property>
+   <item>
+    <property name="text">
+     <string>Column 1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Song name</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Artist name</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Views</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Likes</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Comments</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Reposts</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rel. Date</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Genre</string>
+    </property>
+   </item>
   </widget>
   <widget class="QRadioButton" name="radioAND">
    <property name="geometry">
@@ -75,14 +110,14 @@
   <widget class="QComboBox" name="sortingDropdown">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>120</y>
+     <x>700</x>
+     <y>130</y>
      <width>171</width>
      <height>31</height>
     </rect>
    </property>
    <property name="editable">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="currentText">
     <string/>
@@ -93,18 +128,83 @@
    <property name="duplicatesEnabled">
     <bool>false</bool>
    </property>
+   <item>
+    <property name="text">
+     <string>Select Sorting Algorithm</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Insertion Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Selection Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Merge Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bubble Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Quick Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Heap Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Counting Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Radix Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Bucket Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Tree Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Gnome Sort</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Shell Sort</string>
+    </property>
+   </item>
   </widget>
   <widget class="QComboBox" name="searchingDropdown">
    <property name="geometry">
     <rect>
-     <x>690</x>
-     <y>170</y>
+     <x>700</x>
+     <y>180</y>
      <width>171</width>
      <height>31</height>
     </rect>
    </property>
    <property name="editable">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="currentText">
     <string/>
@@ -115,6 +215,26 @@
    <property name="duplicatesEnabled">
     <bool>false</bool>
    </property>
+   <item>
+    <property name="text">
+     <string>Select Searching Algorithm</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Linear Search</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Binary Search</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Jump Search</string>
+    </property>
+   </item>
   </widget>
   <widget class="QTableWidget" name="songsTable">
    <property name="geometry">
@@ -300302,7 +300422,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>30</y>
+     <y>20</y>
      <width>361</width>
      <height>81</height>
     </rect>
@@ -300331,17 +300451,29 @@
   <widget class="QSplitter" name="splitter">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>320</x>
      <y>150</y>
-     <width>271</width>
+     <width>351</width>
      <height>31</height>
     </rect>
    </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
-   <widget class="QLineEdit" name="colSearchField"/>
+   <widget class="QLineEdit" name="colSearchField">
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+   </widget>
    <widget class="QPushButton" name="colSearchButton">
+    <property name="minimumSize">
+     <size>
+      <width>96</width>
+      <height>0</height>
+     </size>
+    </property>
     <property name="font">
      <font>
       <pointsize>9</pointsize>
@@ -300363,6 +300495,61 @@
      <bool>false</bool>
     </property>
    </widget>
+  </widget>
+  <widget class="QComboBox" name="column2">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>160</y>
+     <width>101</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Column 2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Song name</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Artist name</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Views</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Likes</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Comments</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Reposts</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rel. Date</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Genre</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <resources/>
