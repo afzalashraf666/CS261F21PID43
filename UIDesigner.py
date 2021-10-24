@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>900</width>
-    <height>700</height>
+    <height>800</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>160</y>
+     <y>140</y>
      <width>101</width>
      <height>22</height>
     </rect>
@@ -72,7 +72,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>140</y>
+     <y>120</y>
      <width>50</width>
      <height>17</height>
     </rect>
@@ -85,7 +85,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>150</y>
+     <y>130</y>
      <width>50</width>
      <height>40</height>
     </rect>
@@ -98,7 +98,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>180</y>
+     <y>160</y>
      <width>51</width>
      <height>17</height>
     </rect>
@@ -110,9 +110,9 @@
   <widget class="QComboBox" name="sortingDropdown">
    <property name="geometry">
     <rect>
-     <x>700</x>
+     <x>670</x>
      <y>130</y>
-     <width>171</width>
+     <width>201</width>
      <height>31</height>
     </rect>
    </property>
@@ -197,9 +197,9 @@
   <widget class="QComboBox" name="searchingDropdown">
    <property name="geometry">
     <rect>
-     <x>700</x>
+     <x>670</x>
      <y>180</y>
-     <width>171</width>
+     <width>201</width>
      <height>31</height>
     </rect>
    </property>
@@ -240,7 +240,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>220</y>
+     <y>320</y>
      <width>851</width>
      <height>341</height>
     </rect>
@@ -300341,7 +300341,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>620</y>
+     <y>710</y>
      <width>351</width>
      <height>23</height>
     </rect>
@@ -300354,17 +300354,17 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>620</y>
+     <y>710</y>
      <width>81</width>
      <height>21</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Roboto Cn</family>
+     <family>Microsoft PhagsPa</family>
      <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -300375,17 +300375,17 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>660</y>
-     <width>131</width>
+     <y>750</y>
+     <width>161</width>
      <height>21</height>
     </rect>
    </property>
    <property name="font">
     <font>
-     <family>Roboto Cn</family>
+     <family>Microsoft PhagsPa</family>
      <pointsize>12</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
+     <weight>50</weight>
+     <bold>false</bold>
     </font>
    </property>
    <property name="text">
@@ -300396,7 +300396,7 @@
    <property name="geometry">
     <rect>
      <x>650</x>
-     <y>620</y>
+     <y>710</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -300409,7 +300409,7 @@
    <property name="geometry">
     <rect>
      <x>750</x>
-     <y>620</y>
+     <y>710</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -300448,59 +300448,11 @@
     <set>Qt::AlignCenter</set>
    </property>
   </widget>
-  <widget class="QSplitter" name="splitter">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>150</y>
-     <width>351</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="orientation">
-    <enum>Qt::Horizontal</enum>
-   </property>
-   <widget class="QLineEdit" name="colSearchField">
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="colSearchButton">
-    <property name="minimumSize">
-     <size>
-      <width>96</width>
-      <height>0</height>
-     </size>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Search</string>
-    </property>
-    <property name="autoRepeatInterval">
-     <number>100</number>
-    </property>
-    <property name="autoDefault">
-     <bool>false</bool>
-    </property>
-    <property name="default">
-     <bool>false</bool>
-    </property>
-    <property name="flat">
-     <bool>false</bool>
-    </property>
-   </widget>
-  </widget>
   <widget class="QComboBox" name="column2">
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>160</y>
+     <y>140</y>
      <width>101</width>
      <height>22</height>
     </rect>
@@ -300550,6 +300502,264 @@
      <string>Genre</string>
     </property>
    </item>
+  </widget>
+  <widget class="QComboBox" name="filterColumn">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>250</y>
+     <width>191</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Select Column to filter</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Song name</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Artist name</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Views</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Likes</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Comments</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Reposts</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Rel. Date</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Genre</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="column2_3">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>250</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Select Filter</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Starts with</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Ends with</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Contains</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Does not contain</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="singleColSearchField">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>250</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Enter qeury</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="singleColSearchButton">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>250</y>
+     <width>96</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>96</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+   <property name="autoRepeatInterval">
+    <number>100</number>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>220</y>
+     <width>851</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
+     <width>851</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="Line" name="line_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>670</y>
+     <width>851</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="items_lbl">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>750</y>
+     <width>191</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft PhagsPa</family>
+     <pointsize>12</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Items Scrapped: 300</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="colSearchField">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>140</y>
+     <width>301</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="placeholderText">
+    <string>Search in multiple columns</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="colSearchButton">
+   <property name="geometry">
+    <rect>
+     <x>450</x>
+     <y>180</y>
+     <width>96</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>96</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Search</string>
+   </property>
+   <property name="autoRepeatInterval">
+    <number>100</number>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
   </widget>
  </widget>
  <resources/>

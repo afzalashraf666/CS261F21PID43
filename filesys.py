@@ -11,7 +11,7 @@ def read_csv():
     
     #rading csv file
     df = pd.read_csv("songsdata.csv")
-
+    
     #storing in lists
     song_names = df.NAME.values.tolist()
     artist_names = df.ARTIST.values.tolist()
