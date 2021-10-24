@@ -300503,7 +300503,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="filterColumn">
+  <widget class="QComboBox" name="selectFilterColumn">
    <property name="geometry">
     <rect>
      <x>80</x>
@@ -300558,7 +300558,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="column2_3">
+  <widget class="QComboBox" name="selectFilter">
    <property name="geometry">
     <rect>
      <x>290</x>
