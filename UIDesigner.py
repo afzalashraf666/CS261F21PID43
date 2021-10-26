@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>ScrappApp</class>
+ <widget class="QWidget" name="ScrappApp">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>900</width>
-    <height>800</height>
+    <height>680</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Music Data Scrapping</string>
   </property>
   <widget class="QComboBox" name="column1">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>140</y>
+     <y>110</y>
      <width>101</width>
      <height>22</height>
     </rect>
@@ -72,7 +72,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>120</y>
+     <y>90</y>
      <width>50</width>
      <height>17</height>
     </rect>
@@ -85,7 +85,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>130</y>
+     <y>100</y>
      <width>50</width>
      <height>40</height>
     </rect>
@@ -98,7 +98,7 @@
    <property name="geometry">
     <rect>
      <x>150</x>
-     <y>160</y>
+     <y>130</y>
      <width>51</width>
      <height>17</height>
     </rect>
@@ -111,7 +111,7 @@
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>130</y>
+     <y>100</y>
      <width>201</width>
      <height>31</height>
     </rect>
@@ -198,7 +198,7 @@
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>180</y>
+     <y>150</y>
      <width>201</width>
      <height>31</height>
     </rect>
@@ -240,7 +240,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>320</y>
+     <y>250</y>
      <width>851</width>
      <height>341</height>
     </rect>
@@ -278,11 +278,17 @@
    <property name="columnCount">
     <number>8</number>
    </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>true</bool>
+   </attribute>
    <attribute name="horizontalHeaderCascadingSectionResizes">
     <bool>true</bool>
    </attribute>
    <attribute name="horizontalHeaderStretchLastSection">
     <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
    </attribute>
    <attribute name="verticalHeaderCascadingSectionResizes">
     <bool>true</bool>
@@ -300341,7 +300347,7 @@
    <property name="geometry">
     <rect>
      <x>120</x>
-     <y>710</y>
+     <y>610</y>
      <width>351</width>
      <height>23</height>
     </rect>
@@ -300354,7 +300360,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>710</y>
+     <y>610</y>
      <width>81</width>
      <height>21</height>
     </rect>
@@ -300375,7 +300381,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>750</y>
+     <y>650</y>
      <width>161</width>
      <height>21</height>
     </rect>
@@ -300396,7 +300402,7 @@
    <property name="geometry">
     <rect>
      <x>650</x>
-     <y>710</y>
+     <y>610</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -300409,7 +300415,7 @@
    <property name="geometry">
     <rect>
      <x>750</x>
-     <y>710</y>
+     <y>610</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -300422,7 +300428,7 @@
    <property name="geometry">
     <rect>
      <x>280</x>
-     <y>20</y>
+     <y>10</y>
      <width>361</width>
      <height>81</height>
     </rect>
@@ -300452,7 +300458,7 @@
    <property name="geometry">
     <rect>
      <x>210</x>
-     <y>140</y>
+     <y>110</y>
      <width>101</width>
      <height>22</height>
     </rect>
@@ -300506,8 +300512,8 @@
   <widget class="QComboBox" name="selectFilterColumn">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>250</y>
+     <x>60</x>
+     <y>200</y>
      <width>191</width>
      <height>31</height>
     </rect>
@@ -300561,8 +300567,8 @@
   <widget class="QComboBox" name="selectFilter">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>250</y>
+     <x>270</x>
+     <y>200</y>
      <width>201</width>
      <height>31</height>
     </rect>
@@ -300596,26 +300602,27 @@
   <widget class="QLineEdit" name="singleColSearchField">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>250</y>
+     <x>480</x>
+     <y>200</y>
      <width>201</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Microsoft PhagsPa</family>
      <pointsize>12</pointsize>
     </font>
    </property>
    <property name="placeholderText">
-    <string>Enter qeury</string>
+    <string>Enter query</string>
    </property>
   </widget>
   <widget class="QPushButton" name="singleColSearchButton">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>250</y>
+     <x>690</x>
+     <y>200</y>
      <width>96</width>
      <height>31</height>
     </rect>
@@ -300651,7 +300658,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>220</y>
+     <y>180</y>
      <width>851</width>
      <height>20</height>
     </rect>
@@ -300664,7 +300671,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>290</y>
+     <y>230</y>
      <width>851</width>
      <height>20</height>
     </rect>
@@ -300677,7 +300684,7 @@
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>670</y>
+     <y>590</y>
      <width>851</width>
      <height>21</height>
     </rect>
@@ -300690,7 +300697,7 @@
    <property name="geometry">
     <rect>
      <x>250</x>
-     <y>750</y>
+     <y>650</y>
      <width>191</width>
      <height>21</height>
     </rect>
@@ -300711,13 +300718,14 @@
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>140</y>
+     <y>110</y>
      <width>301</width>
      <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Microsoft PhagsPa</family>
      <pointsize>12</pointsize>
     </font>
    </property>
@@ -300729,7 +300737,7 @@
    <property name="geometry">
     <rect>
      <x>450</x>
-     <y>180</y>
+     <y>150</y>
      <width>96</width>
      <height>31</height>
     </rect>
@@ -300759,6 +300767,32 @@
    </property>
    <property name="flat">
     <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="upDownSortSingle">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>200</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>▲</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="upDownSortWhole">
+   <property name="geometry">
+    <rect>
+     <x>550</x>
+     <y>150</y>
+     <width>41</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>▲</string>
    </property>
   </widget>
  </widget>

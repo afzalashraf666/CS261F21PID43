@@ -9,7 +9,7 @@ def store_csv(song_names, artist_names, plays, likes, comments, release_dates, r
 
 def read_csv():
     
-    #rading csv file
+    #reading csv file
     df = pd.read_csv("songsdata.csv")
     
     #storing in lists
