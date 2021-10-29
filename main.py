@@ -1,6 +1,6 @@
-import scrap
+import Scrap
 
 if __name__ == "__main__":
 
-    scrap.get_genres()
-    scrap.get_songs()
+    Scrap.get_genres()
+    Scrap.get_songs()

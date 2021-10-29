@@ -21,3 +21,5 @@ def read_csv():
     release_dates = df.REL_DATE.values.tolist()
     reposts = df.REPOSTS.values.tolist()
     genre_tags = df.GENRE_TAG.values.tolist()
+
+    return song_names, artist_names, plays, likes, comments, release_dates, reposts, genre_tags

@@ -329,4 +329,3 @@ class Ui_ScrappApp(object):
         self.colSearchButton.setText(_translate("ScrappApp", "Search"))
         self.upDownSortSingle.setText(_translate("ScrappApp", "▲"))
         self.upDownSortWhole.setText(_translate("ScrappApp", "▲"))
-
