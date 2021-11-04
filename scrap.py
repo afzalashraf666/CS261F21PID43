@@ -33,7 +33,6 @@ def get_genres():
         genres.append(genre.text)
 
 def get_songs():
-
     for idx in range(0,len(genres)):
     
         url = "https://soundcloud.com/search/sounds?q=" + str(genres[idx])
@@ -80,6 +79,7 @@ def get_songs():
                 temp = comment.find_next('li')
                 temp = str(temp.text)
             
+
             #formatting and appending in lists
             song_namenillnot = Utilities.nonetyper(song_name)
             song_names.append(song_namenillnot.strip())
@@ -114,6 +114,7 @@ def get_songs():
             comments_str = comments_str.strip()
             comment_strnillnot = Utilities.nonetyper(comments_str)
             comments_str = (comment_strnillnot).replace(',',"")
+            
             #comments_str = Utilities.garbage_remover(comments_str)
             comments.append(comments_str.strip())
             print("Num:" ,len(comments))

@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Music Data Scrapping</string>
+   <string>Music Data Scraping</string>
   </property>
   <widget class="QComboBox" name="column1">
    <property name="geometry">
@@ -300473,7 +300473,7 @@
     <enum>QFrame::Raised</enum>
    </property>
    <property name="text">
-    <string>Music Data Scrapping</string>
+    <string>Music Data Scraping</string>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

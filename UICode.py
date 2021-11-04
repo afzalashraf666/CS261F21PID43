@@ -79,7 +79,6 @@ class Ui_ScrappApp(object):
         self.songsTable.setGridStyle(QtCore.Qt.SolidLine)
         self.songsTable.setWordWrap(True)
         self.songsTable.setCornerButtonEnabled(True)
-        self.songsTable.setAlternatingRowColors(True)
         self.songsTable.setRowCount(300000)
         self.songsTable.setColumnCount(8)
         self.songsTable.setObjectName("songsTable")
@@ -253,7 +252,7 @@ class Ui_ScrappApp(object):
 
     def retranslateUi(self, ScrappApp):
         _translate = QtCore.QCoreApplication.translate
-        ScrappApp.setWindowTitle(_translate("ScrappApp", "Music Data Scrapping"))
+        ScrappApp.setWindowTitle(_translate("ScrappApp", "Music Data Scraping"))
         self.column1.setItemText(0, _translate("ScrappApp", "Column 1"))
         self.column1.setItemText(1, _translate("ScrappApp", "Song name"))
         self.column1.setItemText(2, _translate("ScrappApp", "Artist name"))
@@ -305,7 +304,7 @@ class Ui_ScrappApp(object):
         self.time_lbl.setText(_translate("ScrappApp", "Time Taken: 62ms"))
         self.startButton.setText(_translate("ScrappApp", "START"))
         self.stopButton.setText(_translate("ScrappApp", "STOP"))
-        self.logo.setText(_translate("ScrappApp", "Music Data Scrapping"))
+        self.logo.setText(_translate("ScrappApp", "Music Data Scraping"))
         self.column2.setItemText(0, _translate("ScrappApp", "Column 2"))
         self.column2.setItemText(1, _translate("ScrappApp", "Song name"))
         self.column2.setItemText(2, _translate("ScrappApp", "Artist name"))
