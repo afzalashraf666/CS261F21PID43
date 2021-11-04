@@ -10,6 +10,18 @@
     <height>680</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>680</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Music Data Scrapping</string>
   </property>
@@ -111,7 +123,7 @@
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>100</y>
+     <y>150</y>
      <width>201</width>
      <height>31</height>
     </rect>
@@ -180,11 +192,6 @@
    </item>
    <item>
     <property name="text">
-     <string>Tree Sort</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
      <string>Gnome Sort</string>
     </property>
    </item>
@@ -198,7 +205,7 @@
    <property name="geometry">
     <rect>
      <x>670</x>
-     <y>150</y>
+     <y>110</y>
      <width>201</width>
      <height>31</height>
     </rect>
@@ -251,6 +258,12 @@
      <height>192</height>
     </size>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::StrongFocus</enum>
+   </property>
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
    <property name="autoFillBackground">
     <bool>true</bool>
    </property>
@@ -260,8 +273,14 @@
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QAbstractScrollArea::AdjustToContents</enum>
+   </property>
    <property name="showGrid">
     <bool>true</bool>
+   </property>
+   <property name="gridStyle">
+    <enum>Qt::SolidLine</enum>
    </property>
    <property name="sortingEnabled">
     <bool>false</bool>
@@ -284,14 +303,20 @@
    <attribute name="horizontalHeaderCascadingSectionResizes">
     <bool>true</bool>
    </attribute>
+   <attribute name="horizontalHeaderHighlightSections">
+    <bool>true</bool>
+   </attribute>
    <attribute name="horizontalHeaderStretchLastSection">
     <bool>true</bool>
    </attribute>
    <attribute name="verticalHeaderVisible">
-    <bool>false</bool>
+    <bool>true</bool>
    </attribute>
    <attribute name="verticalHeaderCascadingSectionResizes">
     <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderMinimumSectionSize">
+    <number>20</number>
    </attribute>
    <attribute name="verticalHeaderHighlightSections">
     <bool>true</bool>
@@ -300509,7 +300534,7 @@
     </property>
    </item>
   </widget>
-  <widget class="QComboBox" name="selectFilterColumn">
+  <widget class="QComboBox" name="selectFilterPlusWholeSortColumn">
    <property name="geometry">
     <rect>
      <x>60</x>
@@ -300785,7 +300810,7 @@
   <widget class="QPushButton" name="upDownSortWhole">
    <property name="geometry">
     <rect>
-     <x>550</x>
+     <x>620</x>
      <y>150</y>
      <width>41</width>
      <height>31</height>

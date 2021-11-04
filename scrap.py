@@ -1,5 +1,6 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
+from selenium.webdriver.chrome import options
 from selenium.webdriver.common.keys import Keys
 import time
 import re
@@ -17,20 +18,23 @@ reposts = []
 plays = []
 comments = []
 
-driver = webdriver.Chrome(executable_path='C:\ProgramData\Anaconda3\chromedriver\chromedriver.exe')
+options = webdriver.ChromeOptions()
+options.add_argument("headless")
+driver = webdriver.Chrome(executable_path='C:\ProgramData\Anaconda3\chromedriver\chromedriver.exe' , options = options)
 
 def get_genres():
+    
     driver.get("https://www.chosic.com/list-of-music-genres/")
     content = driver.page_source
     soup = BeautifulSoup(content, features="html.parser")
-
+    
     for instance in soup.findAll('li' , attrs={'class':'capital-letter genre-term'}):
         genre = instance.find('a', class_=False, id=False)
         genres.append(genre.text)
 
 def get_songs():
 
-    for idx in range(0,1):
+    for idx in range(0,len(genres)):
     
         url = "https://soundcloud.com/search/sounds?q=" + str(genres[idx])
         driver.get(url)
@@ -40,10 +44,11 @@ def get_songs():
         #for infinite down scrolling
         time.sleep(1)
         elem = driver.find_element_by_tag_name("body")
-        no_of_pagedowns = 0
+        no_of_pagedowns = 1000
         while no_of_pagedowns:
             elem.send_keys(Keys.PAGE_DOWN)
             time.sleep(0.2)
+            print("Scroll:" , no_of_pagedowns)
             no_of_pagedowns-=1
         
         content = driver.page_source
