@@ -1,5 +1,6 @@
 import sys
 import main
+import time
 import FileSys
 import SortingAlgorithms
 import SearchFilters
@@ -7,7 +8,6 @@ from threading import Thread
 from UICode import *
 from PyQt5.QtWidgets import QApplication, QWidget, QTableWidget, QTableWidgetItem
 
-singleBool = False
 sorting_instances = [
     SortingAlgorithms.MergeSort(),
     SortingAlgorithms.InsertionSort(),
@@ -22,8 +22,8 @@ sorting_instances = [
     SortingAlgorithms.GnomeSort(),
     SortingAlgorithms.ShellSort(),
 ]
-type_instances = [str, str, int, int, int, int, int, str]
-search_instances = [
+
+searching_instances = [
     SearchFilters.startsWith(),
     SearchFilters.startsWith(),
     SearchFilters.endsWith(),
@@ -36,12 +36,18 @@ class ScrappApp(Ui_ScrappApp):
     def __init__(self, window):
         super().__init__()
         self.setupUi(window)
+
+        start = time.perf_counter()
         all_songs = FileSys.read_csv()
-        self.showData(all_songs)
+        end = time.perf_counter()
+        time_taken = end - start
+
+        self.showData(all_songs, time_taken)
+
         self.upDownSortWhole.clicked.connect(self.wholeSort)
         self.singleColSearchButton.clicked.connect(self.columnSeacrh)
 
-    def showData(self, all_songs):
+    def showData(self, all_songs, time_taken):
 
         NumRows = len(all_songs)
         self.songsTable.setColumnCount(8)
@@ -85,51 +91,59 @@ class ScrappApp(Ui_ScrappApp):
             print("Row:", rows)
             rows += 1
 
+        time_str = "Time Taken: " + str(time_taken) + " sec"
+        print(time_str)
+        self.time_lbl.setText(time_str)
+
+        items_str = "Items Scrapped: " + str(len(all_songs))
+        self.items_lbl.setText(items_str)
+
         print("Done")
 
     def wholeSort(self):
-        global singleBool
+
         global sorting_instances
-        if singleBool is False:
-            singleBool = True
+        if self.reverseBox.isChecked() is False:
             all_data = FileSys.read_csv()
             instance = sorting_instances[int(self.sortingDropdown.currentIndex())]
             column = int(self.selectFilterPlusWholeSortColumn.currentIndex())
             print("Column:", column)
-            self.upDownSortWhole.setText("▲")
-            sort_thread = Thread(
-                target=instance.perform_sorting, args=(all_data, column)
-            )
+
+            start = time.perf_counter()
+            instance.perform_sorting(all_data, column)
+            end = time.perf_counter()
+            time_taken = end - start
+
+            sort_thread = Thread(target=self.showData, args=(all_data, time_taken))
             sort_thread.start()
-            self.showData(all_data)
             print("ComboxAscend:", (self.searchingDropdown.currentIndex()))
 
-        elif singleBool is True:
-            singleBool = False
+        elif self.reverseBox.isChecked() is True:
             all_data = FileSys.read_csv()
             instance = sorting_instances[int(self.sortingDropdown.currentIndex())]
             column = int(self.selectFilterPlusWholeSortColumn.currentIndex())
             print("Column:", column)
-            self.upDownSortWhole.setText("▼")
-            sort_thread = Thread(
-                target=instance.perform_sorting, args=(all_data, column)
-            )
-            sort_thread.start()
+
+            start = time.perf_counter()
+            instance.perform_sorting(all_data, column)
             all_data.reverse()
-            self.showData(all_data)
+            end = time.perf_counter()
+            time_taken = end - start
+
+            sort_thread = Thread(target=self.showData, args=(all_data, time_taken))
+            sort_thread.start()
             print("ComboxDescend:", (self.searchingDropdown.currentIndex()))
 
         print("----------------------")
 
     def columnSeacrh(self):
         results = []
-        instance = search_instances[int(self.selectFilter.currentIndex())]
+        instance = searching_instances[int(self.selectFilter.currentIndex())]
         query = self.singleColSearchField.text()
         column = int(self.selectFilterPlusWholeSortColumn.currentIndex())
         results = instance.perform_search(FileSys.read_csv(), column, query)
-        sort_thread = Thread(target=self.showData, args=(results,))
-        sort_thread.start()
-        # self.showData(results)
+        search_thread = Thread(target=self.showData, args=(results,))
+        search_thread.start()
 
 
 if __name__ == "__main__":

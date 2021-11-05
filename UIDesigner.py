@@ -300407,7 +300407,7 @@
     <rect>
      <x>50</x>
      <y>650</y>
-     <width>161</width>
+     <width>291</width>
      <height>21</height>
     </rect>
    </property>
@@ -300420,7 +300420,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Time Taken: 62ms</string>
+    <string>Time taken: 62ms</string>
    </property>
   </widget>
   <widget class="QPushButton" name="startButton">
@@ -300721,7 +300721,7 @@
   <widget class="QLabel" name="items_lbl">
    <property name="geometry">
     <rect>
-     <x>250</x>
+     <x>380</x>
      <y>650</y>
      <width>191</width>
      <height>21</height>
@@ -300736,7 +300736,7 @@
     </font>
    </property>
    <property name="text">
-    <string>Items Scrapped: 300</string>
+    <string>Items scrapped: 300</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="colSearchField">
@@ -300799,25 +300799,38 @@
     <rect>
      <x>790</x>
      <y>200</y>
-     <width>41</width>
+     <width>51</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>▲</string>
+    <string>Sort</string>
    </property>
   </widget>
   <widget class="QPushButton" name="upDownSortWhole">
    <property name="geometry">
     <rect>
-     <x>620</x>
+     <x>610</x>
      <y>150</y>
-     <width>41</width>
+     <width>51</width>
      <height>31</height>
     </rect>
    </property>
    <property name="text">
-    <string>▲</string>
+    <string>Sort</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="reverseBox">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>80</y>
+     <width>70</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reverse</string>
    </property>
   </widget>
  </widget>

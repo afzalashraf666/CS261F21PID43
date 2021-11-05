@@ -75,10 +75,10 @@ if __name__ == "__main__":
         reposts,
         genre_tags,
     ) = read_csv()
-    comments = attribute_iterator(comments)
     likes = attribute_iterator(likes)
     plays = attribute_iterator(plays)
     reposts = attribute_iterator(reposts)
+    comments = attribute_iterator(comments)
     store_csv(
         song_names,
         artist_names,

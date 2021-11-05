@@ -58,7 +58,7 @@ def read_csv():
             genre_tags[idx],
         )
         all_songs.append(newSong)
-    print("Length:", len(all_songs))
+    print("LengthBefore:", len(all_songs))
     return all_songs
 
 
